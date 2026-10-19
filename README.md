@@ -1,4 +1,4 @@
-# Nobash Files
+# Nobash Files - WordPress File Manager 
 
 **A free, open-source WordPress file manager for managing, maintaining, and recovering website files from one workspace.**
 
