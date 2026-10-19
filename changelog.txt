@@ -1,0 +1,16 @@
+= 1.0.0.1 =
+* Hardened recovery storage to require a non-public folder outside WordPress and the detected document root.
+* Enforced safer delegated write boundaries and blocked executable filename extensions.
+* Respected WordPress file editing restrictions for plugin and theme file saves.
+* Used prepared SQL identifier placeholders for plugin-owned tables and improved request input handling.
+* Added version-matched readme metadata and offline authorization tests.
+* Separate read-only integrity plugin candidate is available for WordPress.org review; it is not equivalent to this file manager.
+
+= 1.0.0.0 =
+* Simplified navigation to Files, Editor, Trash, Tools and Settings; added a Tools hub and on-demand file details.
+* Compacted the File Manager header, safety banner, shortcuts, table and inspector; improved responsive layout and mobile search.
+* Released one free Nobash Files plugin by Nobash with all features included.
+* Included up to 100 safety versions per file, delegated access, advanced integrity, monitoring, security/repair/quarantine, Multisite and agency tools.
+* Removed the separate paid extension, licensing dependencies, upgrade screens and feature locks.
+* Hardened path authorization, recovery writes, private storage, transfer locking, local file operation validation.
+* Corrected security endpoint dispatch.

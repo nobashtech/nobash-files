@@ -1,0 +1,12 @@
+# Local build output and temporary files
+/dist/
+/.cache/
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+.idea/
+.vscode/
+/vendor/
+/node_modules/

@@ -1,0 +1,163 @@
+/* Shared compact workspace. Keep this layer after the legacy component styles. */
+.nobash-files-wrap {
+    --nobash-space: 8px;
+    --nobash-radius: 8px;
+    --nobash-control-height: 32px;
+    padding: 12px 14px 16px;
+    background: #f8f9fc;
+    color: #334155;
+}
+.nobash-files-wrap[data-view] .nobash-files-header { align-items: center; margin-bottom: 8px; gap: 14px; }
+.nobash-files-wrap[data-view] .nobash-files-brand { gap: 9px; }
+.nobash-files-wrap[data-view] .nobash-files-logo { width: 34px; height: 34px; border-radius: 9px; font-size: 20px; box-shadow: none; }
+.nobash-files-wrap[data-view] .nobash-files-brand h1 { font-size: 20px; line-height: 1.2; letter-spacing: -.025em; }
+.nobash-files-wrap[data-view] .nobash-files-brand p { font-size: 11px; margin-top: 2px; }
+.nobash-files-wrap[data-view] .nobash-files-edition-pill { padding: 3px 6px; font-size: 8px; }
+.nobash-files-wrap[data-view] .nobash-files-head-actions { gap: 6px; align-items: center; }
+.nobash-files-wrap .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: var(--nobash-control-height) !important;
+    padding: 0 10px !important;
+    border-radius: 7px !important;
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    box-shadow: none;
+}
+.nobash-files-wrap .button .dashicons { width: 15px; height: 15px; font-size: 15px; line-height: 15px; flex-shrink: 0; }
+.nobash-files-wrap .button-primary { background: #315cf4; border-color: #315cf4; }
+.nobash-files-wrap .button-primary:hover { background: #254cda; border-color: #254cda; }
+.nobash-files-wrap[data-view] .nobash-files-safe-banner { min-height: 38px; padding: 5px 10px; gap: 8px; margin-bottom: 8px; border-radius: var(--nobash-radius); }
+.nobash-files-wrap[data-view] .nobash-files-safe-banner > span { width: 24px; height: 24px; border-radius: 6px; font-size: 15px; flex-shrink: 0; }
+.nobash-files-wrap[data-view] .nobash-files-safe-banner > div { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.nobash-files-wrap[data-view] .nobash-files-safe-banner strong { font-size: 11px; white-space: nowrap; }
+.nobash-files-wrap[data-view] .nobash-files-safe-banner p { font-size: 10.5px; margin: 0; }
+.nobash-files-wrap[data-view] .nobash-files-safe-toggle-form { margin: 0 0 0 auto; flex-shrink: 0; }
+.nobash-files-wrap[data-view] .nobash-files-safe-banner .button { height: 26px !important; min-height: 26px !important; padding: 0 8px !important; font-size: 10px !important; border-radius: 6px !important; margin: 0; }
+.nobash-files-wrap :is(.nobash-files-panel, .nobash-files-history-table-card, .nobash-files-trash-table-card) { border-radius: var(--nobash-radius); box-shadow: 0 1px 2px rgb(16 24 40 / 3%); min-width: 0; }
+.nobash-files-wrap .nobash-files-panel-head { min-height: 36px; padding: 6px 10px; }
+.nobash-files-wrap .nobash-files-panel-head strong { font-size: 12px; }
+.nobash-files-wrap :is(button, a, input, select, textarea):focus-visible { outline: 2px solid #315cf4; outline-offset: 2px; }
+
+.nobash-files-wrap[data-view] .nobash-files-head-actions > .button,
+.nobash-files-wrap[data-view] .nobash-files-head-actions > .nobash-files-upload-picker-wrap > .button,
+.nobash-files-wrap[data-view="editor"] .nobash-files-editor-toolbar .button {
+    min-height: 32px !important;
+    height: 32px !important;
+}
+.nobash-files-wrap .nobash-files-simple { max-width: none; width: auto; }
+
+/* Section headings and cards share the File Manager's spacing. */
+.nobash-files-wrap :is(.nobash-files-version-history-page, .nobash-files-integrity-page-v2, .nobash-files-activity-page-v2, .nobash-files-trash-page-v2, .nobash-files-settings-page-v2) { max-width: none; margin-bottom: 16px; }
+.nobash-files-wrap :is(.nobash-files-history-titlebar, .nobash-files-integrity-page-title, .nobash-files-activity-page-title, .nobash-files-trash-title-v2, .nobash-files-settings-page-title) { margin-bottom: 10px !important; gap: 10px; align-items: center; }
+.nobash-files-wrap :is(.nobash-files-history-titlebar, .nobash-files-integrity-page-title, .nobash-files-activity-page-title, .nobash-files-trash-title-v2, .nobash-files-settings-page-title) h2 { font-size: 18px !important; line-height: 1.3 !important; }
+.nobash-files-wrap :is(.nobash-files-history-titlebar, .nobash-files-integrity-page-title, .nobash-files-activity-page-title, .nobash-files-trash-title-v2, .nobash-files-settings-page-title) p { font-size: 11px !important; line-height: 1.5; margin-top: 3px !important; }
+.nobash-files-wrap .nobash-files-simple > .nobash-files-panel { padding: 0; background: transparent; border: 0; box-shadow: none; }
+.nobash-files-wrap .nobash-files-simple h2 { font-size: 18px; line-height: 1.3; margin: 0 0 4px; }
+.nobash-files-wrap .nobash-files-simple > section > p { font-size: 11px; line-height: 1.5; margin: 0 0 10px; color: #64748b; }
+.nobash-files-wrap :is(.nobash-files-monitor-hero, .nobash-files-security-hero, .nobash-files-network-hero, .nobash-files-agency-hero, .nobash-files-integrity-summary-v2, .nobash-files-activity-hero-v2) {
+    min-height: 76px !important;
+    padding: 12px !important;
+    gap: 10px;
+    border-radius: var(--nobash-radius) !important;
+    margin-bottom: 10px !important;
+    box-shadow: none;
+}
+.nobash-files-wrap :is(.nobash-files-monitor-hero, .nobash-files-security-hero, .nobash-files-network-hero, .nobash-files-agency-hero) h3 { font-size: 16px; line-height: 1.3; margin: 2px 0 4px; }
+.nobash-files-wrap :is(.nobash-files-monitor-hero, .nobash-files-security-hero, .nobash-files-network-hero, .nobash-files-agency-hero) p { font-size: 11px; line-height: 1.5; margin-bottom: 0; }
+.nobash-files-wrap :is(.nobash-files-monitor-hero-icon, .nobash-files-security-hero-icon, .nobash-files-activity-hero-icon) { width: 34px !important; height: 34px !important; border-radius: 8px !important; font-size: 20px !important; flex-shrink: 0; }
+.nobash-files-wrap :is(.nobash-files-monitor-card, .nobash-files-monitor-sidebox, .nobash-files-security-card, .nobash-files-security-sidebox, .nobash-files-access-editor, .nobash-files-agency-editor, .nobash-files-agency-audit, .nobash-files-network-shared, .nobash-files-network-sites) { padding: 10px; border-radius: var(--nobash-radius); margin-bottom: 8px; min-width: 0; }
+.nobash-files-wrap :is(.nobash-files-monitor-sidebox, .nobash-files-security-sidebox, .nobash-files-history-side-card, .nobash-files-activity-side-card, .nobash-files-trash-side-card, .nobash-files-integrity-detail-card) { padding: 10px !important; border-radius: var(--nobash-radius) !important; }
+.nobash-files-wrap :is( .nobash-files-security-card-head, .nobash-files-access-editor-head, .nobash-files-history-section-head) { margin-bottom: 8px; gap: 8px; }
+.nobash-files-wrap :is( .nobash-files-security-card-head, .nobash-files-access-editor-head) h4 { font-size: 12px; margin: 0; }
+
+/* Metrics and lists keep the same card radius, row density and type scale. */
+.nobash-files-wrap :is(.nobash-files-history-metrics, .nobash-files-security-metrics, .nobash-files-network-metrics, .nobash-files-activity-metrics-v2, .nobash-files-trash-stats-v2, .nobash-files-access-overview) { gap: 8px !important; margin-bottom: 10px !important; }
+.nobash-files-wrap :is(.nobash-files-history-metrics, .nobash-files-security-metrics, .nobash-files-network-metrics, .nobash-files-activity-metrics-v2, .nobash-files-trash-stats-v2) article { min-height: 64px !important; padding: 9px 10px !important; gap: 8px !important; border-radius: var(--nobash-radius) !important; }
+.nobash-files-wrap :is(.nobash-files-history-metrics, .nobash-files-security-metrics, .nobash-files-network-metrics, .nobash-files-activity-metrics-v2, .nobash-files-trash-stats-v2) strong { font-size: 18px !important; line-height: 1.2; }
+.nobash-files-wrap :is(.nobash-files-history-metrics, .nobash-files-security-metrics, .nobash-files-network-metrics, .nobash-files-activity-metrics-v2, .nobash-files-trash-stats-v2) :is(small, p) { font-size: 10px !important; line-height: 1.4; }
+.nobash-files-wrap :is(.nobash-files-history-layout, .nobash-files-integrity-content-v2, .nobash-files-activity-layout-v2, .nobash-files-trash-layout-v2, .nobash-files-settings-grid-v2, .nobash-files-monitor-grid, .nobash-files-security-grid) { grid-template-columns: minmax(0, 1fr) 240px !important; gap: 10px !important; }
+.nobash-files-wrap .nobash-files-agency-layout { grid-template-columns: 220px minmax(0, 1fr); gap: 10px; }
+/* Access puts the editor first; Agency puts its template sidebar first. */
+.nobash-files-wrap .nobash-files-access-layout { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.nobash-files-wrap .nobash-files-access-subject-row { grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 10px; }
+.nobash-files-wrap .nobash-files-access-editor .nobash-files-permission-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); }
+.nobash-files-wrap .nobash-files-access-layout :is(label, label > span, .nobash-files-access-help, .nobash-files-access-tip > div) { min-width: 0; overflow-wrap: anywhere; }
+.nobash-files-wrap .nobash-files-access-layout input[type="checkbox"] { flex-shrink: 0; }
+.nobash-files-wrap .nobash-files-access-editor-head { flex-wrap: wrap; }
+.nobash-files-wrap .nobash-files-access-actions { flex-wrap: wrap; }
+.nobash-files-wrap :is(.nobash-files-monitor-main, .nobash-files-monitor-side, .nobash-files-security-main, .nobash-files-security-side, .nobash-files-history-main, .nobash-files-history-side) { gap: 8px; min-width: 0; }
+.nobash-files-wrap table th { padding: 7px 9px !important; font-size: 10px !important; line-height: 1.4; background-color: #f8fafc; }
+.nobash-files-wrap table td { padding: 6px 9px !important; font-size: 11px !important; line-height: 1.5; }
+.nobash-files-wrap :is( .nobash-files-security-row, .nobash-files-access-profile-row, .nobash-files-agency-template) { padding: 8px 10px; border-radius: 7px; gap: 8px; }
+.nobash-files-wrap :is( .nobash-files-security-row, .nobash-files-access-profile-row, .nobash-files-agency-template) strong { font-size: 11.5px; }
+.nobash-files-wrap :is( .nobash-files-access-path-grid, .nobash-files-permission-grid) { gap: 8px; min-width: 0; }
+.nobash-files-wrap :is(.nobash-files-access-stat, .nobash-files-access-help, .nobash-files-access-tip) { padding: 10px; border-radius: var(--nobash-radius); }
+
+/* Form controls, without changing code-editor or switch geometry. */
+.nobash-files-wrap :is(input[type="text"], input[type="email"], input[type="password"], input[type="url"], input[type="number"], input[type="search"], select) {
+    min-height: 32px !important;
+    border-radius: 7px !important;
+    font-size: 11px !important;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.nobash-files-wrap :is(.nobash-files-access-editor, .nobash-files-agency-editor) textarea { min-height: 84px; padding: 8px; border-radius: 7px; font-size: 11px; line-height: 1.5; box-sizing: border-box; max-width: 100%; }
+.nobash-files-wrap :is(.nobash-files-access-editor, .nobash-files-agency-editor, .nobash-files-monitor-card) label { font-size: 11px; }
+.nobash-files-wrap :is(.nobash-files-settings-card-v2, .nobash-files-integrity-results-v2, .nobash-files-activity-feed-v2) { border-radius: var(--nobash-radius) !important; }
+.nobash-files-wrap .nobash-files-settings-row-v2 { padding: 8px 10px !important; min-height: 50px !important; }
+.nobash-files-wrap .nobash-files-settings-row-v2 strong { font-size: 11.5px !important; }
+.nobash-files-wrap .nobash-files-settings-row-v2 small { font-size: 10px !important; }
+
+/* Editor retains a useful writing area while its chrome matches other views. */
+.nobash-files-wrap .nobash-files-editor-rebuilt { grid-template-columns: 180px minmax(0, 1fr) 224px; gap: 8px; }
+.nobash-files-wrap .nobash-files-editor-toolbar { padding: 6px 8px; gap: 5px; min-height: 42px; }
+.nobash-files-wrap .nobash-files-editor-breadcrumb { min-height: 36px; padding: 7px 10px; }
+.nobash-files-wrap .nobash-files-editor-tabs { min-height: 34px; }
+.nobash-files-wrap .nobash-files-editor-tab { padding: 7px 10px; font-size: 11px; }
+.nobash-files-wrap .nobash-files-editor-tree-panel { min-width: 0; }
+.nobash-files-wrap .nobash-files-editor-inspector { gap: 8px; min-width: 0; }
+
+/* Setup is part of the same visual system, rather than a separate landing page. */
+.nobash-files-setup-page { padding: 20px 16px; }
+.nobash-files-setup-shell { max-width: 880px; }
+.nobash-files-setup-brand { margin-bottom: 16px; }
+.nobash-files-setup-card { padding: 22px 24px; border-radius: 10px; }
+.nobash-files-setup-card > h1 { font-size: 24px; line-height: 1.25; }
+.nobash-files-setup-lead { font-size: 12px; line-height: 1.6; }
+.nobash-files-setup-steps { margin-bottom: 16px; }
+.nobash-files-setup-option, .nobash-files-workspace-option { padding: 12px; border-radius: 8px; }
+.nobash-files-setup-benefits { gap: 10px; }
+.nobash-files-setup-benefits article { padding: 12px; border-radius: 8px; }
+.nobash-files-setup-page .button { min-height: 34px; border-radius: 7px; font-size: 12px; }
+
+@media (max-width: 1280px) {
+    .nobash-files-wrap[data-view] .nobash-files-brand p,
+    .nobash-files-wrap[data-view] .nobash-files-safe-banner p { display: none; }
+    .nobash-files-wrap .nobash-files-editor-rebuilt { grid-template-columns: 170px minmax(0, 1fr); }
+    .nobash-files-wrap .nobash-files-editor-inspector { grid-column: 1 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 1200px) {
+    .nobash-files-wrap .nobash-files-access-layout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 1100px) {
+    .nobash-files-wrap :is(.nobash-files-history-layout, .nobash-files-integrity-content-v2, .nobash-files-activity-layout-v2, .nobash-files-trash-layout-v2, .nobash-files-settings-grid-v2, .nobash-files-monitor-grid, .nobash-files-security-grid) { grid-template-columns: minmax(0, 1fr) !important; }
+    .nobash-files-wrap :is(.nobash-files-history-side, .nobash-files-activity-side-v2, .nobash-files-trash-side-v2, .nobash-files-settings-side-v2, .nobash-files-integrity-side-v2) { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 782px) {
+    .nobash-files-wrap { padding: 10px; }
+    .nobash-files-wrap[data-view] .nobash-files-header { flex-wrap: wrap; gap: 8px; }
+    .nobash-files-wrap[data-view] .nobash-files-head-actions { width: 100%; justify-content: flex-start; flex-wrap: wrap; }
+    .nobash-files-wrap[data-view] .nobash-files-safe-banner { flex-wrap: nowrap; align-items: center; }
+    .nobash-files-wrap :is(.nobash-files-access-layout, .nobash-files-agency-layout, .nobash-files-access-path-grid, .nobash-files-editor-rebuilt) { grid-template-columns: minmax(0, 1fr); }
+    .nobash-files-wrap :is(.nobash-files-history-side, .nobash-files-activity-side-v2, .nobash-files-trash-side-v2, .nobash-files-settings-side-v2, .nobash-files-integrity-side-v2, .nobash-files-editor-inspector) { grid-template-columns: minmax(0, 1fr) !important; }
+    .nobash-files-wrap :is(.nobash-files-monitor-hero, .nobash-files-security-hero, .nobash-files-network-hero, .nobash-files-agency-hero) { flex-wrap: wrap; }
+    .nobash-files-wrap :is(.nobash-files-history-metrics, .nobash-files-security-metrics, .nobash-files-network-metrics, .nobash-files-activity-metrics-v2, .nobash-files-trash-stats-v2) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .nobash-files-wrap .nobash-files-editor-toolbar { flex-wrap: wrap; }
+    .nobash-files-wrap .nobash-files-editor-tree-panel { max-height: 220px; overflow-y: auto; }
+    .nobash-files-wrap :is( .nobash-files-security-actions, .nobash-files-access-actions, .nobash-files-agency-apply-row) { flex-wrap: wrap; }
+    .nobash-files-setup-page { padding: 14px 10px; }
+    .nobash-files-setup-card { padding: 18px; }
+}

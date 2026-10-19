@@ -1,0 +1,52 @@
+name: Source checks and release ZIP
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  php-checks:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.1', '8.2', '8.3', '8.4']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+      - name: PHP syntax check
+        run: find . -name '*.php' -print0 | xargs -0 -n 1 php -l
+      - name: Access policy smoke test
+        run: php tests/access-policy-smoke.php
+      - name: Read-only integrity smoke test
+        run: php tests/integrity-smoke.php
+
+  js-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: JavaScript syntax check
+        run: node --check assets/js/admin.js
+
+  package:
+    runs-on: ubuntu-latest
+    needs: [php-checks, js-checks]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build installable release ZIP
+        run: python3 scripts/build-release.py
+      - name: Upload release ZIP for manual review
+        uses: actions/upload-artifact@v4
+        with:
+          name: nobash-files-release-1.0.0.1
+          path: dist/nobash-files-release-1.0.0.1.zip
+          if-no-files-found: error

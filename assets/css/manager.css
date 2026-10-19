@@ -1,0 +1,183 @@
+/* File Manager density and responsive layout. Scoped to this workspace. */
+.nobash-files-wrap[data-view="manager"] {
+    --nobash-manager-gap: 8px;
+    padding: 12px 14px 16px;
+}
+
+.nobash-files-wrap[data-view="manager"] .nobash-files-header {
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+.nobash-files-wrap[data-view="manager"] .nobash-files-brand { gap: 9px; flex-shrink: 0; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-logo {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    font-size: 20px;
+    box-shadow: none;
+}
+.nobash-files-wrap[data-view="manager"] .nobash-files-brand h1 { font-size: 20px; line-height: 1.2; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-brand p { font-size: 11px; margin-top: 2px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-head-actions { gap: 6px; flex-wrap: nowrap; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-search {
+    display: inline-flex;
+    align-items: center;
+    min-width: 200px;
+    width: clamp(200px, 23vw, 340px);
+    height: 32px;
+    border-radius: 7px;
+}
+.nobash-files-wrap[data-view="manager"] .nobash-files-btn {
+    height: 32px !important;
+    min-height: 32px !important;
+    padding: 0 11px !important;
+    border-radius: 7px !important;
+    box-shadow: none !important;
+}
+.nobash-files-wrap[data-view="manager"] .nobash-files-overflow-button { width: 32px; height: 32px; border-radius: 7px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-safe-banner {
+    min-height: 38px;
+    gap: 8px;
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+.nobash-files-wrap[data-view="manager"] .nobash-files-safe-banner > span { width: 24px; height: 24px; border-radius: 6px; font-size: 15px; flex-shrink: 0; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-safe-banner strong { font-size: 11px; white-space: nowrap; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-safe-banner p { font-size: 10.5px; margin-left: 8px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-safe-toggle-form { margin: 0 0 0 auto; flex-shrink: 0; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-safe-banner .button {
+    height: 26px !important;
+    min-height: 26px !important;
+    padding: 0 8px !important;
+    border-radius: 6px !important;
+}
+
+.nobash-files-wrap[data-view="manager"] .nobash-files-manager-shortcuts {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--nobash-manager-gap);
+    margin-bottom: 8px;
+}
+.nobash-files-wrap[data-view="manager"] .nobash-files-quick {
+    min-width: 0;
+    min-height: 50px;
+    padding: 8px 10px;
+    gap: 8px;
+    border-radius: 8px;
+    box-shadow: none;
+    text-align: left;
+}
+.nobash-files-wrap[data-view="manager"] .nobash-files-quick > div { min-width: 0; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-quick-icon { width: 28px; height: 28px; font-size: 16px; border-radius: 7px; flex-shrink: 0; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-quick strong { font-size: 11.5px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-quick small { display: block; font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-quick-arrow { width: 12px; height: 12px; font-size: 12px; }
+
+.nobash-files-wrap[data-view="manager"] .nobash-files-manager-rebuilt {
+    grid-template-columns: 180px minmax(0, 1fr) 224px;
+    gap: var(--nobash-manager-gap);
+    align-items: stretch;
+}
+.nobash-files-wrap[data-view="manager"] .nobash-files-manager-rebuilt > .nobash-files-panel {
+    min-width: 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgb(16 24 40 / 3%);
+}
+.nobash-files-wrap[data-view="manager"] .nobash-files-tree-panel,
+.nobash-files-wrap[data-view="manager"] .nobash-files-manager-details {
+    min-height: 460px !important;
+}
+.nobash-files-wrap[data-view="manager"] .nobash-files-manager-details { grid-column: auto; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-panel-head { min-height: 36px; padding: 5px 9px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-tree-head strong { font-size: 11.5px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-tree-head .nobash-files-icon-btn { width: 26px; height: 26px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-tree { padding: 6px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-tree-row { min-height: 30px; padding: 5px 6px; gap: 6px; font-size: 11px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-tree-storage { padding: 10px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-manager-breadcrumb { height: 36px; padding: 0 10px; font-size: 11.5px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-explorer-toolbar-primary { min-height: 40px; padding: 5px 7px; gap: 6px; flex-wrap: wrap; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-explorer-left,
+.nobash-files-wrap[data-view="manager"] .nobash-files-explorer-right { gap: 5px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-explorer-right { margin-left: auto; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-tool-button { min-height: 28px; height: 28px; padding: 0 7px; border-radius: 6px; font-size: 10.5px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-sort-control > span { display: none; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-sort-control select { min-height: 28px; height: 28px; font-size: 10.5px; border-radius: 6px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-view-switch { padding: 2px; border-radius: 6px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-view-switch button { width: 26px; height: 24px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-table th { height: 30px; padding: 0 8px; font-size: 10px; background: #f8fafc; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-table td { height: 36px; padding: 4px 8px; font-size: 11px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-table td:nth-child(5) { white-space: nowrap; font-size: 10px; font-variant-numeric: tabular-nums; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-check-col { width: 28px !important; padding-left: 9px !important; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-file-name { gap: 6px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-file-icon { width: 22px; height: 22px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-file-icon .dashicons { font-size: 16px; width: 16px; height: 16px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-row-menu { width: 26px; height: 26px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-badge { font-size: 9px; padding: 3px 5px; border-radius: 5px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-table-footer { min-height: 28px; padding: 5px 9px; font-size: 10px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-table-footer #nobash-files-folder-state { display: none; }
+
+.nobash-files-wrap[data-view="manager"] .nobash-files-manager-empty {
+    min-height: 0;
+    height: auto;
+    padding: 24px 14px;
+    justify-content: flex-start;
+}
+.nobash-files-wrap[data-view="manager"] .nobash-files-empty-folder-art { width: 64px; height: 54px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-empty-folder-art > .dashicons { width: 46px; height: 42px !important; font-size: 46px !important; line-height: 42px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-empty-folder-art i { width: 34px; height: 30px; top: 10px; left: 10px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-empty-folder-art b { box-shadow: none; width: 5px; height: 5px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-manager-empty > strong { margin-top: 12px; font-size: 12px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-manager-empty > p { font-size: 11px; margin: 6px 0 14px; line-height: 1.5; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-empty-capabilities { gap: 5px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-empty-capabilities > span { grid-template-columns: 24px 1fr; grid-template-rows: auto; gap: 7px; padding: 6px 8px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-empty-capabilities i { width: 24px; height: 24px; font-size: 14px; grid-row: auto; border-radius: 6px; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-empty-capabilities small { display: none; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-file-hero strong { font-size: 12px; overflow-wrap: anywhere; }
+.nobash-files-wrap[data-view="manager"] .nobash-files-dl { font-size: 11px; }
+.nobash-files-wrap[data-view="manager"] button:focus-visible,
+.nobash-files-wrap[data-view="manager"] select:focus-visible { outline: 2px solid #315cf4; outline-offset: 2px; }
+
+@media (max-width: 1280px) {
+    .nobash-files-wrap[data-view="manager"] .nobash-files-search { min-width: 160px; width: 190px; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-brand p { display: none; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-safe-banner p { display: none; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-manager-rebuilt { grid-template-columns: 166px minmax(0, 1fr); }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-manager-details { grid-column: 1 / -1; min-height: 0 !important; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-manager-empty { display: grid; grid-template-columns: auto 1fr; gap: 3px 14px; padding: 14px; text-align: left; align-items: center; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-empty-folder-art { grid-row: 1 / 4; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-manager-empty > strong { margin: 0; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-manager-empty > p { margin: 0; max-width: none; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-empty-capabilities { display: flex; flex-wrap: wrap; margin-top: 5px; }
+}
+
+@media (max-width: 900px) {
+    .nobash-files-wrap[data-view="manager"] .nobash-files-head-actions { width: auto; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-search { display: inline-flex; justify-content: center; width: 32px; min-width: 32px; flex: 0 0 32px; padding: 0; order: 0; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-search > span:nth-child(2),
+    .nobash-files-wrap[data-view="manager"] .nobash-files-search > kbd { display: none; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-quick { padding: 7px; gap: 6px; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-quick small,
+    .nobash-files-wrap[data-view="manager"] .nobash-files-quick-arrow { display: none; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-quick-icon { width: 24px; height: 24px; font-size: 14px; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-safe-banner { align-items: center; flex-wrap: nowrap; }
+}
+
+@media (max-width: 640px) {
+    .nobash-files-wrap[data-view="manager"] { padding: 10px; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-header { flex-wrap: wrap; gap: 8px; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-brand h1 { font-size: 18px; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-head-actions { width: 100%; justify-content: flex-start; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-head-actions .nobash-files-header-overflow { margin-left: auto; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-manager-shortcuts { grid-template-columns: repeat(5, minmax(112px, 1fr)); overflow-x: auto; padding-bottom: 3px; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-quick { min-height: 40px; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-manager-rebuilt { grid-template-columns: minmax(0, 1fr); }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-tree-panel { min-height: 0 !important; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-tree { max-height: 130px; overflow-y: auto; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-tree-storage { display: none; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-explorer-toolbar-primary { align-items: center; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-tool-button { min-height: 32px; height: 32px; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-table td { height: 40px; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-row-menu { width: 32px; height: 32px; }
+    .nobash-files-wrap[data-view="manager"] .nobash-files-manager-empty { padding: 12px; }
+}
